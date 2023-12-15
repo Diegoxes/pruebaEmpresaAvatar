@@ -1,5 +1,6 @@
 .navBar{
     background: linear-gradient(to bottom, #645f5f, #ada0a0);
+    width: 100%;
     align-items: center;
     height: 90px;
     display: flex;
