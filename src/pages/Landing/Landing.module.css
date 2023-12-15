@@ -1,0 +1,140 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #c84040, #866f6f);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    padding-top: 7.5em;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.pokeball {
+    position: relative;
+    width: 9em;
+    height: 9em;
+    background: #fff;
+    border: .3em solid #000;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: inset -10px 10px 0 10px #ccc;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+    animation: fall .75s ease-in-out,
+        shake 1.25s cubic-bezier(.36, .07, .19, .97) 3;
+}
+
+.pokeball::before,
+.pokeball::after {
+    content: "";
+    position: absolute;
+}
+
+.pokeball::before {
+    background: #e81b07;
+    width: 100%;
+    height: 50%;
+}
+
+.pokeball::after {
+    top: calc(50% - .3em);
+    width: 100%;
+    height: .6em;
+    background: #000;
+}
+
+.pokeball__button {
+    position: absolute;
+    top: calc(50% - 1.3em);
+    left: calc(50% - 1.3em);
+    width: 2.6em;
+    height: 2.6em;
+    background: #7f8c8d;
+    border: .5em solid #fff;
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: 0 0 0 10px black;
+    animation: blink .5s alternate 7;
+}
+
+.btn_play {
+    margin-top: 1em;
+    font-family: 'Quicksand';
+    font-size: 40px;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #fcf1f1;
+    font-weight: 900;  
+    transition: transform 0.4s ease;
+}
+
+.btn_play:hover,
+.pokeball:hover {
+     transform: scale(1.4);
+}
+
+@keyframes blink {
+    from {
+        background: #eee;
+    }
+
+    to {
+        background: #e81b07;
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(0, 0) rotate(0);
+    }
+
+    20% {
+        transform: translate(-10px, 0) rotate(-20deg);
+    }
+
+    30% {
+        transform: translate(10px, 0) rotate(20deg);
+    }
+
+    50% {
+        transform: translate(-10px, 0) rotate(-10deg);
+    }
+
+    60% {
+        transform: translate(10px, 0) rotate(10deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0);
+    }
+}
+
+@keyframes fall {
+    0% {
+        top: -500px
+    }
+
+    60% {
+        top: 0
+    }
+
+    80% {
+        top: -20px
+    }
+
+    100% {
+        top: 0
+    }
+}
+

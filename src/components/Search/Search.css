@@ -1,0 +1,17 @@
+.containerSearch{
+    width: 650px;
+    display: flex;
+}
+input{
+    width: 250px;
+    height: 25px;
+}
+
+.btn-search{
+    height: 25px;
+    margin-left: 5px;
+}
+.btn-reset{
+    height: 25px;
+    margin-left: 10px;
+}

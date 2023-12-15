@@ -1,0 +1,42 @@
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5em;
+    padding: 1.5em 0;
+    border-bottom: .1em solid #ccc;
+}
+
+.header_title {
+    border-bottom: .1em solid transparent;
+}
+
+.create {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    border-bottom: .1em solid transparent;
+    transition: .3s ease all;
+}
+
+.createText {
+    margin-right: .5em;
+}
+
+.create:hover {
+    border-bottom: .1em solid white;
+    transform: scale(1.4);
+}
+
+
+
+
+.paginate {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2.5em 10em;
+    margin-top: 100px;
+}

@@ -1,0 +1,9 @@
+.navBar{
+    background: linear-gradient(to bottom, #645f5f, #ada0a0);
+    align-items: center;
+    height: 90px;
+    display: flex;
+    justify-content: space-around;
+    font-size:25px;
+    
+}
