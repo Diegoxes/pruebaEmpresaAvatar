@@ -65,10 +65,10 @@ const rootReducer = (state = initialState, { type, payload }) => {
     case RESET_POKEMONS:
       return {
         ...state,
-        updatedShowPokemons: state.pokemons.slice(
-          state.indexfirstPokemon,
-          state.indexLastPokemon
-        ),
+        indexPage: 1,
+        indexfirstPokemon: 0,
+        indexLastPokemon: state.quantityPokemons,
+        updatedShowPokemons: state.pokemons.slice(0, state.quantityPokemons),
         quantityPages: Math.ceil(
           state.pokemons.length / state.quantityPokemons
         ),
