@@ -40,3 +40,9 @@
     padding: 2.5em 10em;
     margin-top: 100px;
 }
+
+@media (max-width: 576px) {
+    .page-numbers-container {
+      display: none;  /* Oculta los números de página en pantallas más pequeñas */
+    }
+  }

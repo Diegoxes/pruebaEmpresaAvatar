@@ -48,7 +48,9 @@ const Home = () => {
         <button onClick={handleClick} value={'-'} disabled={indexPage === 1}>
           Previous
         </button>
-        {renderPageNumbers()}
+        <div className={styles['page-numbers-container']}>
+          {renderPageNumbers()}
+        </div>
         <span>Page {indexPage} of {quantityPages || 1}</span>
         <button onClick={handleClick} value={'+'} disabled={indexPage >= quantityPages}>
           Next

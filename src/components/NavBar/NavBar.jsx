@@ -6,7 +6,7 @@ import './NavBar.css'
 const NavBar=()=> {
   return (
     <div className='navBar'>
-        <Link to="/Home" style={{ textDecoration: 'none', color: 'inherit' }}> Home</Link>
+        <Link to="/Home" style={{ textDecoration: 'none', color: 'inherit',fontSize:'25px' }}> Home</Link>
         <Search/>
 
     </div>
