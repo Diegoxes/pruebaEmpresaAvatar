@@ -1,4 +1,4 @@
-import { Route, Routes, useNavigate,useLocation } from "react-router-dom";
+import { Route, Routes, useNavigate, useLocation } from "react-router-dom";
 import Landing from "./pages/Landing/Landing";
 import Home from "./pages/Home/Home";
 import Detail from "./pages/Detail/Detail";
@@ -6,7 +6,8 @@ import { useDispatch } from "react-redux";
 import { loadingPokemons } from "./redux/actions";
 import React, { useEffect } from "react";
 import NavBar from "./components/NavBar/NavBar";
-import './App.css'
+import "./App.css";
+
 
 const App = () => {
   const dispatch = useDispatch();
@@ -17,14 +18,15 @@ const App = () => {
   const start = () => {
     navigate("/Home");
   };
-  
+
   useEffect(() => {
     dispatch(loadingPokemons());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <>
-       {!isRootPath && <NavBar />}
+      {!isRootPath && <NavBar />}
       <Routes>
         <Route path="/" element={<Landing start={start} />} />
         <Route path="/Home" element={<Home />} />

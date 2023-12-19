@@ -21,7 +21,10 @@ const Search = () => {
         type="text"
         placeholder="Search by name"
         value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
+        onChange={(e) => {
+          setSearchTerm(e.target.value);
+          console.log(e);
+        }}
       />
       <button className="btn-search" onClick={handleSearch}>
         Search

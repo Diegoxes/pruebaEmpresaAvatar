@@ -28,6 +28,7 @@
 @media (max-width: 576px) {
   .image {
     width: 20em;
+    margin: 0;
   }
   .container1 {
     display: flex;
@@ -36,5 +37,8 @@
     align-items: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
+    margin-right:10px;
   }
+
+  
 }

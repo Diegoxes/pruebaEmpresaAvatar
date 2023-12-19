@@ -14,9 +14,11 @@ export const loadingPokemons = () => {
       const { data } = await axios.get(
         "https://pokeapi.co/api/v2/pokemon?limit=140"
       );
+      console.log("data",data)
       const responses = await Promise.all(
         data.results.map((pokemon) => axios(pokemon.url))
       );
+      console.log("responses",responses)
 
       const pokemons = responses.map((response) => {
         const { id, name, sprites, stats, weight, height, types } =
@@ -48,11 +50,10 @@ export const loadingPokemons = () => {
   };
 };
 
-export const setIndexPage = (index) => {
-  return async (dispatch) => {
-    await dispatch({ type: SET_INDEX_PAGE, payload: index });
-  };
-};
+export const setIndexPage = (index) => ({
+  type: SET_INDEX_PAGE,
+  payload: index
+});
 
 export const getPokemonById = (id) => async (dispatch) => {
   try {

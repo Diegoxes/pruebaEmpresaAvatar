@@ -8,11 +8,13 @@ const Home = () => {
   const updatedShowPokemons = useSelector((state) => state.updatedShowPokemons);
   const indexPage = useSelector((state) => state.indexPage);
   const quantityPages = useSelector((state) => state.quantityPages);
+
   const [showPokemons, setShowPokemons] = useState([]);
 
   const dispatch = useDispatch();
 
-  const handleClick = (event) => {
+  
+  const handleClick = (event) => { //Index
     let index = event.target.value === '-' ? indexPage - 1 : indexPage + 1;
     dispatch(setIndexPage(index));
   };
@@ -48,9 +50,7 @@ const Home = () => {
         <button onClick={handleClick} value={'-'} disabled={indexPage === 1}>
           Previous
         </button>
-        <div className={styles['page-numbers-container']}>
           {renderPageNumbers()}
-        </div>
         <span>Page {indexPage} of {quantityPages || 1}</span>
         <button onClick={handleClick} value={'+'} disabled={indexPage >= quantityPages}>
           Next
